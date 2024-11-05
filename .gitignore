@@ -1,0 +1,13 @@
+# Node modules and build files for React
+frontend/node_modules/
+frontend/build/
+
+# Maven or Gradle build files for Spring Boot
+backend/target/
+backend/build/
+
+# OS and IDE files
+.DS_Store
+*.log
+*.idea/
+*.vscode/
