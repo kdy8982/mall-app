@@ -1,20 +1,21 @@
 import React from 'react'
+import CategoryComponent from '../components/category/CategoryComponent'
+import HeaderLayout from './HeaderLayout'
 
 function BasicLayout({ children }) {
   return (
-    <div>
+    <div className="min-w-[1024px]">
       <div className="flex justify-center">
-        <header className="flex h-[115px] w-[1200px] items-center bg-gray-200 text-center">
-          <span className="w-2/12">logo</span>
-          <div className="w-7/12">search box</div>
-          <div className="w-3/12">
-            icon menu(mypage, cart)
-            <div>login</div>
-          </div>
+        <header className="flex w-[1024px] items-center bg-gray-200 text-center">
+          <HeaderLayout />
         </header>
       </div>
+
       <div className="flex items-center justify-center">
-        <div className="w-[1300px] bg-green-300 text-center">{children}</div>
+        <div className="flex w-[1024px]">
+          <CategoryComponent />
+          <div className="w-full text-center">{children}</div>
+        </div>
       </div>
     </div>
   )
